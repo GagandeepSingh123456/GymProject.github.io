@@ -1,0 +1,807 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body::-webkit-scrollbar{
+    background-color:white;
+    width:5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: red;
+}
+.cursor{
+    width:20px;
+    height:20px;
+    background-color: red;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 99;
+}
+.navbar{
+ width:100%;
+ display:flex;
+ align-items: center;
+ justify-content:space-between;
+ position: fixed;
+ z-index: 99;
+}
+.navbar ul{
+    list-style: none;
+}
+.logo{
+    margin-left: 50px;
+}
+.logo img{
+    width:45px;
+    border-radius: 100%;
+}
+.logo li {
+   display:flex;
+   align-items: center;
+   font-size: 35px;
+   font-weight: 400;
+}
+.menu{
+    display:none;
+    color:white;
+}
+.navbar-list ul{
+    display:flex;
+    font-size: 20px;
+    margin-right: 150px;
+    color:white;
+    font-weight: 500;
+}
+.navbar-list  li{
+   margin:0 20px;
+}
+.navbar-list ul li a{
+    text-decoration: none;
+    color:white;
+}
+.navbar-list ul li a:hover{
+    cursor: pointer;
+    color:red;
+}
+video{
+   width:100%;
+   height:100vh;
+   object-fit: cover;
+   position: fixed;
+   z-index: -1;
+}
+.main{
+    background-color:rgba(0, 0, 0, 0.161);
+    position:absolute;
+    width:100%;
+}
+.page1{
+    width:100%;
+    height:100vh;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.page1 h1{
+    font-size: 80px;
+    color:red;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+.page1 h1::before{
+    content: "NO PAIN NO GAIN";
+    position: absolute;
+    color:white;
+    top:-2px;
+    left: -2px;
+    z-index: -1;
+    -webkit-text-stroke: 1px black;
+
+}
+.page1 h2{
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.page1 button{
+    font-size: 20px;
+    margin-top: 30px;
+    padding:20px 40px;
+    border-radius: 50px;
+    border-color: red;
+    background: none;
+    color:red;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.169);
+}
+.page1 button a{
+    color:red;
+    text-decoration: none;
+}
+.page1 button:hover{
+    background-color: rgba(0, 0, 0, 0.549);
+    font-weight: 500;
+}
+
+.page2{
+    width:100%;
+}
+.scroll{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+.scroll1{
+    display:inline-block;
+    animation-name: scrollbar;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.scroll h4{
+    display:inline-block;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-text-stroke: 2px red;
+    color:transparent;
+}
+.scroll h4:hover{
+    color:red;
+    transition: 0.2s linear;
+}
+@keyframes scrollbar {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.about{
+    width:100%;
+    height:50vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+.about img{
+    width:200px;
+    border-radius: 10%;
+}
+.about-in{
+    color:white;
+    align-items: center;
+    width:100%;
+    text-align: center;
+}
+.about-in h2{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color:red;
+    margin:0 0 40px 0;
+}
+.about-in p{
+    font-size: 18px;
+    line-height:30px;
+    margin-top: 25px;
+}
+.featheading{
+    background-color: red;
+    width:100%;
+    height:100px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.featheading h1{
+    font-size: 6vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+.featheading h1::before{
+    content: "features";
+    position: absolute;
+    color:black;
+    z-index: -1;
+    top:-3px;
+    left:-3px;
+}
+
+.features{
+    width:100%;
+    height:70vh;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:30px 0;
+}
+.features div{
+    width:50vh;
+    height:300px;
+    border-radius: 10%;
+    background-position: center;
+    text-align: center;
+    border:1px solid red;
+
+}
+.features1{
+    background-image: url('./Images/Bodybuilder-WallpaperImage-HD-photo.jpg');
+    background-size: cover;
+}
+.features2{
+    background-image: url('./Images/Try-This-6-Week-Womens-Workout-Plan-for-Total-Body-Transformation.webp');
+    background-size: cover;
+}
+.features3{
+    background-image: url('./Images/5_day_dumbbell_workout_-_1200x630.jpg');
+    background-size: cover;
+}
+.features1 .featdata{
+    background-color: black;
+    width:100%;
+    height:100%;
+    color:white;
+    padding:40px 0;
+    text-align: center;
+    opacity: 0;
+    transition:all linear 0.4s;
+}
+.features2 .featdata{
+    background-color: black;
+    width:100%;
+    height:100%;
+    color:white;
+    padding:40px 0;
+    text-align: center;
+    opacity: 0;
+    transition:all linear 0.4s;
+}
+.features3 .featdata{
+    background-color: black;
+    width:100%;
+    height:100%;
+    color:white;
+    padding:40px 0;
+    text-align: center;
+    opacity: 0;
+    transition:all linear 0.4s;
+    
+}
+.featdata:hover{
+    opacity: 1;
+   
+    
+}
+.features1:hover{
+    transform: rotate3d(1,1,0, 20deg);
+    transition: 0.2s linear;
+}
+.features2:hover{
+    transform: rotate3d(1,1,0, 20deg);
+    transition: 0.2s linear;
+}
+.features3:hover{
+    transform: rotate3d(1,1,0, 20deg);
+    transition: 0.2s linear;
+}
+.featdata h2{
+    font-size: 30px;
+    text-transform:uppercase;
+    color:red;
+}
+.featdata p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.featdata button{
+    background-color: red;
+    color:white;
+    padding:10px 30px;
+    border-radius: 20ch;
+    margin-top: 30px;
+    border: none;
+}
+.featdata button a{
+    text-decoration: none;
+    color:white;
+}
+.packages{
+    width:100%;
+    height:100vh;
+    background-image: url('./Images/sven-mieke-MsCgmHuirDo-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap:25px;
+    flex-wrap: wrap;
+}
+.packages div{
+    width:50vh;
+    height:75vh;
+    background-color:rgba(255, 255, 255, 0.86); 
+    color:black;  
+}
+.standard{
+    margin:0;
+    padding:0;
+    color:white;
+    text-align: center;
+}
+.standard h2{
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:65px;
+    color:black;
+}
+.standard h3{
+    background-color: rgb(244, 151, 151);
+    font-size: 25px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:65px;
+}
+.standard ul{
+    font-size: 18px;
+    list-style: none;
+    margin-top: 20px;
+    line-height: 35px;
+}
+.standard button{
+    background-color: red;
+    padding:10px 25px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border:none;
+    color:white;
+}
+
+.advanced{
+    margin:0;
+    padding:0;
+    color:white;
+    text-align: center;
+}
+.advanced h2{
+    background-color:red;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:65px;
+    color:black;
+}
+.advanced h3{
+    background-color: rgb(244, 151, 151);
+    font-size: 25px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:65px;
+}
+.advanced ul{
+    font-size: 18px;
+    list-style: none;
+    margin-top: 20px;
+    line-height: 35px;
+}
+.advanced button{
+    background-color: red;
+    padding:10px 25px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border:none;
+    color:white;
+}
+
+
+.premium{
+    margin:0;
+    padding:0;
+    color:white;
+    text-align: center;
+}
+.premium h2{
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:65px;
+    color:black;
+}
+.premium h3{
+    background-color: rgb(244, 151, 151);
+    font-size: 25px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:65px;
+}
+.premium ul{
+    font-size: 18px;
+    list-style: none;
+    margin-top: 20px;
+    line-height: 35px;
+}
+.premium button{
+    background-color: red;
+    padding:10px 25px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border:none;
+    color:white;
+}
+.workheading{
+    background-color: red;
+    width:100%;
+    height:100px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workheading h1{
+    font-size: 6vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+.workheading h1::before{
+    content: "workout gallery";
+    position: absolute;
+    color:black;
+    z-index: -1;
+    top:-3px;
+    left:-3px;
+}
+.gallery{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    padding:30px 40px;
+    margin: 30px 0;
+}
+.gallery div{
+    width:90vh;
+    height:80vh;
+}
+.galleryimg{
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    overflow: hidden;
+}
+.galleryimg .image1{
+    width:100%;
+    height:100%;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function:ease;
+    animation-iteration-count:infinite;
+    background-position:center;
+    background-size: cover;
+}
+@keyframes move {
+    0%{
+        background-image: url('./Images/alora-griffiths-E3wehabi_B4-unsplash.jpg');
+    }
+    25%{
+        background-image: url('./Images/beautiful-young-sporty-couple-training-workout-gym-together.jpg');
+    }
+    50%{
+        background-image: url('./Images/cathy-pham-3jAN9InapQI-unsplash.jpg');
+    }
+    75%{
+        background-image: url('./Images/pexels-the-lazy-artist-gallery-2247179.jpg');
+    }
+    100%{
+        background-image: url('./Images/cathy-pham-3jAN9InapQI-unsplash.jpg');
+    }
+}
+
+.gallerycontent{
+    padding:80px 20px 0 0;
+}
+.gallerycontent i{
+    text-transform: uppercase;
+    line-height: 35px;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.gallerycontent p{
+    color:white;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.gallerycontent button{
+    background-color: red;
+    color:white;
+    font-size: 15px;
+    border:none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding:15px 30px;
+    border-radius: 20ch;
+    margin-top: 20px;
+}
+
+
+.traheading{
+    background-color: red;
+    width:100%;
+    height:100px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.traheading h1{
+    font-size: 6vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+.traheading h1::before{
+    content: "trainers";
+    position: absolute;
+    color:black;
+    z-index: -1;
+    top:-3px;
+    left:-3px;
+}
+
+.trainer{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding:70px 0;
+    color:white;
+}
+.trainer1{
+    width:80vh;
+    height:35vh;
+    display:flex;
+    background-color: rgb(36, 35, 35);
+}
+.trainer1:hover{
+    background-color: rgb(50, 47, 47);
+}
+.traimg{
+    width:45%;
+    height:100%;
+    overflow: hidden;
+}
+.traimg img{
+    width:100%;
+    height:100%;
+}
+.traimg img:hover{
+    transform: scale(1.1);
+    transition: all ease 0.2s;
+}
+
+.tracontent{
+    width:50%;
+    height:100%;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+.tracontent h1{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tracontent h3{
+    color:red;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tracontent p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.tracontent button{
+    background-color: red;
+    color:white;
+    padding:5px 10px;
+    border-radius: 20ch;
+    border:none;
+    margin-top: 15px;
+}
+.footer{
+    background-color: rgb(42, 41, 41);
+    width:100%;
+    height:50vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:40px;
+    padding-top: 30px;
+}
+.one{
+    width:35vh;
+    height:45vh;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.one h2{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 23px;
+}
+.one ul{
+    list-style: none;
+    margin-top: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.one ul li{
+    margin-top: 20px;
+}
+.one ul li span{
+    font-size: 12px;
+    color:red;
+}
+.one img{
+    width:35px;
+    height:35px;
+}
+.one img{
+    border-radius: 100%;
+    margin:30px 10px;
+}
+.rights{
+    width:100%;
+    height:15vh;
+    background-color: black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.rights h2{
+    color:white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.rights span{
+    color:red;
+}
+
+@media(max-width:842px){
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar.activee{
+        background-color: rgba(0, 0, 0, 0.829);
+    }
+    .navbar-list ul{
+        flex-direction: column;
+        font-size: 25px;
+        margin: auto;
+    }
+    .navbar-list ul li{
+        padding:20px 0;
+    }
+    .navbar-list{
+        display:none;
+    }
+    .navbar-list.active{
+        display:block;
+        background-color: black;
+        width:100%;
+        text-align: center;
+    }
+    .menu{
+        display:block;
+        position: absolute;
+        left:90%;
+        top:10%;
+        font-size: 30px;
+    }
+    .page1{
+        margin-top: 80px;
+    }
+    .page1 h1{
+        text-align: center;
+    }
+    .page1 h2{
+        text-align: center;
+    }
+    .about{
+        flex-wrap: wrap;
+        height:auto;
+    }
+    .about img{
+        order:1;
+        text-align: center;
+        margin: auto;
+    }
+    .about-in{
+        order:2;
+    }
+    .features{
+        height:auto;
+    }
+    .features div{
+        margin: 20px 0;
+    }
+    .gallery{
+        height:auto;
+    }
+    .gallery div{
+        margin-top: 30px;
+    }
+    .packages{
+        height:auto;
+        padding:30px 0;
+    }
+    .trainer{
+        padding:0 20px;
+        height:auto;
+        margin:20px 0;
+    }
+    .footer{
+        height:auto;
+        padding:2px 0;
+    }
+    .one{
+        height:35vh;
+    }
+}
