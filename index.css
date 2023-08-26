@@ -247,15 +247,15 @@ video{
 
 }
 .features1{
-    background-image: url('./Images/Bodybuilder-WallpaperImage-HD-photo.jpg');
+    background-image: url('Bodybuilder-WallpaperImage-HD-photo.jpg');
     background-size: cover;
 }
 .features2{
-    background-image: url('./Images/Try-This-6-Week-Womens-Workout-Plan-for-Total-Body-Transformation.webp');
+    background-image: url('Try-This-6-Week-Womens-Workout-Plan-for-Total-Body-Transformation.webp');
     background-size: cover;
 }
 .features3{
-    background-image: url('./Images/5_day_dumbbell_workout_-_1200x630.jpg');
+    background-image: url('5_day_dumbbell_workout_-_1200x630.jpg');
     background-size: cover;
 }
 .features1 .featdata{
@@ -330,7 +330,7 @@ video{
 .packages{
     width:100%;
     height:100vh;
-    background-image: url('./Images/sven-mieke-MsCgmHuirDo-unsplash.jpg');
+    background-image: url('sven-mieke-MsCgmHuirDo-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -530,19 +530,19 @@ video{
 }
 @keyframes move {
     0%{
-        background-image: url('./Images/alora-griffiths-E3wehabi_B4-unsplash.jpg');
+        background-image: url('alora-griffiths-E3wehabi_B4-unsplash.jpg');
     }
     25%{
-        background-image: url('./Images/beautiful-young-sporty-couple-training-workout-gym-together.jpg');
+        background-image: url('beautiful-young-sporty-couple-training-workout-gym-together.jpg');
     }
     50%{
-        background-image: url('./Images/cathy-pham-3jAN9InapQI-unsplash.jpg');
+        background-image: url('cathy-pham-3jAN9InapQI-unsplash.jpg');
     }
     75%{
-        background-image: url('./Images/pexels-the-lazy-artist-gallery-2247179.jpg');
+        background-image: url('pexels-the-lazy-artist-gallery-2247179.jpg');
     }
     100%{
-        background-image: url('./Images/cathy-pham-3jAN9InapQI-unsplash.jpg');
+        background-image: url('cathy-pham-3jAN9InapQI-unsplash.jpg');
     }
 }
 
