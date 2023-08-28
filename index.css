@@ -247,43 +247,43 @@ video{
 
 }
 .features1{
-    background-image: url('Bodybuilder-WallpaperImage-HD-photo.jpg');
+    background-image: url('./Images/Bodybuilder-WallpaperImage-HD-photo.jpg');
     background-size: cover;
 }
 .features2{
-    background-image: url('Try-This-6-Week-Womens-Workout-Plan-for-Total-Body-Transformation.webp');
+    background-image: url('./Images/Try-This-6-Week-Womens-Workout-Plan-for-Total-Body-Transformation.webp');
     background-size: cover;
 }
 .features3{
-    background-image: url('5_day_dumbbell_workout_-_1200x630.jpg');
+    background-image: url('./Images/5_day_dumbbell_workout_-_1200x630.jpg');
     background-size: cover;
 }
 .features1 .featdata{
     background-color: black;
-    width:100%;
-    height:100%;
+    /* width:100%;
+    height:100%; */
     color:white;
-    padding:40px 0;
+    padding:60px 0;
     text-align: center;
     opacity: 0;
     transition:all linear 0.4s;
 }
 .features2 .featdata{
     background-color: black;
-    width:100%;
-    height:100%;
+    /* width:100%;
+    height:100%; */
     color:white;
-    padding:40px 0;
+    padding:60px 0;
     text-align: center;
     opacity: 0;
     transition:all linear 0.4s;
 }
 .features3 .featdata{
     background-color: black;
-    width:100%;
-    height:100%;
+    /* width:100%;
+    height:100%; */
     color:white;
-    padding:40px 0;
+    padding:60px 0;
     text-align: center;
     opacity: 0;
     transition:all linear 0.4s;
@@ -330,7 +330,7 @@ video{
 .packages{
     width:100%;
     height:100vh;
-    background-image: url('sven-mieke-MsCgmHuirDo-unsplash.jpg');
+    background-image: url('./Images/2.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -514,35 +514,35 @@ video{
     height:80vh;
 }
 .galleryimg{
-    border-top-left-radius: 20%;
+    /* border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
-    overflow: hidden;
+    overflow: hidden; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 20px;
 }
-.galleryimg .image1{
+.galleryimg::-webkit-scrollbar{
+    display:none;
+}
+.galleryimg1{
     width:100%;
     height:100%;
-    animation-name: move;
-    animation-duration: 10s;
-    animation-timing-function:ease;
-    animation-iteration-count:infinite;
-    background-position:center;
-    background-size: cover;
+    animation-name: Menu;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
-@keyframes move {
-    0%{
-        background-image: url('alora-griffiths-E3wehabi_B4-unsplash.jpg');
+.galleryimg1 img{
+    width:100%;
+    height:100%;
+}
+@keyframes Menu{
+    from{
+        transform: translateX(0);
     }
-    25%{
-        background-image: url('beautiful-young-sporty-couple-training-workout-gym-together.jpg');
-    }
-    50%{
-        background-image: url('cathy-pham-3jAN9InapQI-unsplash.jpg');
-    }
-    75%{
-        background-image: url('pexels-the-lazy-artist-gallery-2247179.jpg');
-    }
-    100%{
-        background-image: url('cathy-pham-3jAN9InapQI-unsplash.jpg');
+    to{
+        transform: translateX(-400%);
     }
 }
 
@@ -780,17 +780,28 @@ video{
         height:auto;
     }
     .features div{
-        margin: 20px 0;
+        /* margin: 20px 20px; */
+    }
+    .features{
+        padding:10px 30px;
+    }
+    .features .features1,.features2,.features3{
+        margin:20px 20px;
     }
     .gallery{
         height:auto;
     }
-    .gallery div{
-        margin-top: 30px;
+    .gallery .galleryimg{
+        height:50vh;
     }
     .packages{
         height:auto;
         padding:30px 0;
+    }
+    .packages div{
+        margin:0 20px;
+        height:auto;
+        padding:5px 5px;
     }
     .trainer{
         padding:0 20px;
@@ -803,5 +814,8 @@ video{
     }
     .one{
         height:35vh;
+    }
+    .rights{
+        text-align: center;
     }
 }
